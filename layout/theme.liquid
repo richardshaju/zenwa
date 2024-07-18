@@ -1,0 +1,22 @@
+<html>
+  <head>{% render 'pagefly-head' %}
+    {{ content_for_header }}
+
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+
+  </head>
+  <body>
+    {% section 'announcement-bar' %}
+    {% section 'header' %}
+
+    <main id="main" role="main">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+
+    {% comment %} {{ 'theme.js' | asset_url | script_tag }} {% endcomment %}
+
+
+  </body>
+</html>
