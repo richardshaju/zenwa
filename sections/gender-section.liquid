@@ -1,0 +1,36 @@
+<section class="two-images-wrapper">
+  <div class="men"></div>
+  <div class="women"></div>
+</section>
+<style>
+  .two-images-wrapper {
+    display: flex;
+  }
+
+  .men{
+    background-image: url("{{ 'men.png' | asset_url }}");
+    width: 50%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  .women {
+    background-image: url("{{ 'women.png' | asset_url }}");
+    width: 50%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Gender Section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "gender-section"
+    }
+  ]
+}
+{% endschema %}

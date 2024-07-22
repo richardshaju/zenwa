@@ -9,24 +9,6 @@
         <h1></h1>
       </div>
     {%- endif -%}
-    {%- if section.settings.image2 != blank -%}
-      <div class="two-user">
-        <h1></h1>
-      </div>
-    {%- else -%}
-      <div class="two">
-        <h1></h1>
-      </div>
-    {%- endif -%}
-    {%- if section.settings.image3 != blank -%}
-      <div class="three-user">
-        <h1></h1>
-      </div>
-    {%- else -%}
-      <div class="three">
-        <h1></h1>
-      </div>
-    {%- endif -%}
   </div>
 </section>
 
@@ -36,8 +18,8 @@
   }
 
   .one {
-    background-image: url("{{ 'one.png' | asset_url }}");
-    width: 33.333%;
+    background-image: url("{{ 'bg.png' | asset_url }}");
+    width: 100%;
     height: 500px;
     background-size: cover;
     background-position: center;
