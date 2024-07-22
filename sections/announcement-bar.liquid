@@ -5,36 +5,42 @@
         {% if customer %}
           {{ customer.default_address.city }}
         {% else %}
-          <p> Welcome, guest!</p>
+          <p>Welcome, guest!</p>
         {% endif %}
       </div>
       <div class="announcement-bar-right-section">
         <ul class="announcement-bar-inner-list">
           {%- if section.blocks.size == 0 -%}
-            <li>
-              <a href="#">Help</a>
-            </li>
-
             {% if shop.customer_accounts_enabled %}
               {% if customer %}
                 <li>
                   <a href="/account">Account</a>
                 </li>
-
               {% else %}
                 <li>
                   <a href="/account/login">Sign in</a>
                 </li>
               {% endif %}
-            {% endif %}
-
-          {%- else -%}
-            {% for block in section.blocks %}
               <li>
-                <a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
+                <a href="/account/login">Whishlist</a>
               </li>
-            {% endfor %}
-          {%- endif -%}
+              <li>
+                <a href="/account/login">Loyalty</a>
+              </li>
+              <li>
+                <a href="/cart">
+                  <img
+                    class="shopping-img"
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    src="{{ 'd.png' | asset_url }}"
+                  >
+                </a>
+              </li>
+            {% endif %}
+          {%- else -%}
+         {%- endif -%}
         </ul>
       </div>
     </div>
