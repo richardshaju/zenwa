@@ -2,36 +2,11 @@
   <section>
     <div class="announcement-bar">
       <div class="announcement-bar-left-section">
-        {%- if section.settings.image2 != blank -%}
-          <img
-            width="40"
-            height="40"
-            loading="lazy"
-            src="{{ section.settings.image2 | image_url }}"
-          >
-        {%- else -%}
-          <img
-            width="40"
-            height="40"
-            loading="lazy"
-            src="{{ 'a.png' | asset_url }}"
-          >
-        {%- endif -%}
-        {%- if section.settings.image != blank -%}
-          <img
-            width="35"
-            height="35"
-            loading="lazy"
-            src="{{ section.settings.image | image_url }}"
-          >
-        {%- else -%}
-          <img
-            width="35"
-            height="35"
-            loading="lazy"
-            src="{{ 'b.png' | asset_url }}"
-          >
-        {%- endif -%}
+        {% if customer %}
+          {{ customer.default_address.city }}
+        {% else %}
+          <p> Welcome, guest!</p>
+        {% endif %}
       </div>
       <div class="announcement-bar-right-section">
         <ul class="announcement-bar-inner-list">
@@ -103,7 +78,7 @@
       "type": "color",
       "id": "background",
       "label": "Background",
-      "default": "#F4F4F4"
+      "default": "#ffff"
     },
     {
       "type": "color",
