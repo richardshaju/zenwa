@@ -28,6 +28,7 @@
   "order": [
     "banner",
     "three-images",
+    "gender-section",
     "more-info",
     "all-collections",
     "all-products"
