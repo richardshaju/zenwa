@@ -4,12 +4,12 @@
       "type": "banner",
       "settings": {}
     },
-    "gender-section": {
-      "type": "gender-section",
-      "settings": {}
-    },
     "three-images": {
       "type": "three-images",
+      "settings": {}
+    },
+    "gender-section": {
+      "type": "gender-section",
       "settings": {}
     },
     "more-info": {
