@@ -1,19 +1,27 @@
 <section>
   <div class="banner-wrapper">
-    <div class="slide-text" id="text1"><p>Members: Free Shipping!</p></div>
-    <div class="slide-text" id="text2">Save Up to 40%</div>
-    <div class="slide-text" id="text3">Get Your Gear Faster</div>
+    <p>SALE</p>
+    <p>JUST IN</p>
+    <p>DESIGNERS</p>
+    <p>CLOTHING</p>
+    <p>SHOES</p>
+    <p>BAGS</p>
+    <p>ACCESSORIES</p>
+    <p>HOME</p>
+    <p>STORIES</p>
+    <p>WHAT'S ON</p>
+    <p>GIFTS</p>
   </div>
 </section>
 
 <style>
   .banner-wrapper {
-    padding: 30px;
-    background: {{ section.settings.background }}
-    ;
-    color: {{ section.settings.text_color }}
-    ;
-
+    padding: 10px;
+    border-bottom: 3px;
+    background: white;
+    color: black;
+    display: flex;
+    gap: 5px;
   }
 
   .slide-text {
@@ -28,7 +36,7 @@
   }
 </style>
 
-<script>
+{% comment %} <script>
   document.addEventListener('DOMContentLoaded', function () {
     const text1 = document.getElementById('text1');
     const text2 = document.getElementById('text2');
@@ -61,7 +69,7 @@
     // Set interval to slide the text every 3 seconds
     setInterval(slideText, 3000);
   });
-</script>
+</script> {% endcomment %}
 
 {% schema %}
 {
