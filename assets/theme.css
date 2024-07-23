@@ -26,6 +26,7 @@ body {
  .announcement-bar-inner-list {
     display: flex;
     align-items: center;
+   gap:10px;
  }
 
  .announcement-bar-inner-list li {
