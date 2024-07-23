@@ -49,23 +49,28 @@
   </section>
 
   <style>
-    .announcement-bar {
-      background: {{ section.settings.background }}
-      ;
-      color: {{ section.settings.text_color }}
-      ;
-    }
-    .announcement-bar-right-section{
-      display:flex;
-      align-items:center;
+      .announcement-bar {
+        background: {{ section.settings.background }}
+        ;
+        color: {{ section.settings.text_color }}
+        ;
+      }
+      .announcement-bar-right-section{
+        display:flex;
+        align-items:center;
 
-    }
-    .form-wrapper{
-      height:100%;
-      display:flex;
-      align-itmes:centre;
-      justify-content: center;
-    }
+      }
+      .search-nav{
+
+         border: none;
+    border-bottom: 1px solid #000; /* Adjust the color and thickness as needed */
+    outline: none;
+      }
+      .search-nav:focus{
+          border: none;
+    border-bottom: 1px solid #000; /* Keeps the border bottom on focus */
+    outline: none;
+      }
   </style>
 
   <script></script>
