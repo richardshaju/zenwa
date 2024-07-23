@@ -38,7 +38,7 @@
                 </a>
               </li>
               <form action="/search">
-                <input placeholder="search" type="search">
+                <input class="search-nav" placeholder="search" type="search">
               </form>
             {% endif %}
           {%- else -%}
@@ -54,6 +54,11 @@
       ;
       color: {{ section.settings.text_color }}
       ;
+    }
+    .search-nav{
+      height:100%;
+      display:flex;
+      align-itmes:centre;
     }
   </style>
 
