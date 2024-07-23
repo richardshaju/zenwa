@@ -1,4 +1,4 @@
-<section class='banner'>
+<section class="banner">
   <div class="banner-wrapper">
     <p>SALE</p>
     <p>JUST IN</p>
@@ -29,7 +29,8 @@
      display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
+    margin-bottom:5px;
   }
 
   .slide-text {
@@ -44,40 +45,42 @@
   }
 </style>
 
-{% comment %} <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const text1 = document.getElementById('text1');
-    const text2 = document.getElementById('text2');
-    const text3 = document.getElementById('text3');
+{% comment %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const text1 = document.getElementById('text1');
+      const text2 = document.getElementById('text2');
+      const text3 = document.getElementById('text3');
 
-    // Array of text elements
-    const texts = [text1, text2, text3];
-    let currentIndex = 0;
+      // Array of text elements
+      const texts = [text1, text2, text3];
+      let currentIndex = 0;
 
-    // Function to slide the text to the middle
-    function slideToMiddle(element) {
-      element.style.left = '40%';
-    }
+      // Function to slide the text to the middle
+      function slideToMiddle(element) {
+        element.style.left = '40%';
+      }
 
-    // Function to reset the position of the text
-    function resetPosition(element) {
-      element.style.left = '-100%';
-    }
+      // Function to reset the position of the text
+      function resetPosition(element) {
+        element.style.left = '-100%';
+      }
 
-    // Function to handle sliding the text elements
-    function slideText() {
-      resetPosition(texts[currentIndex]);
-      currentIndex = (currentIndex + 1) % texts.length;
+      // Function to handle sliding the text elements
+      function slideText() {
+        resetPosition(texts[currentIndex]);
+        currentIndex = (currentIndex + 1) % texts.length;
+        slideToMiddle(texts[currentIndex]);
+      }
+
+      // Initial slide
       slideToMiddle(texts[currentIndex]);
-    }
 
-    // Initial slide
-    slideToMiddle(texts[currentIndex]);
-
-    // Set interval to slide the text every 3 seconds
-    setInterval(slideText, 3000);
-  });
-</script> {% endcomment %}
+      // Set interval to slide the text every 3 seconds
+      setInterval(slideText, 3000);
+    });
+  </script>
+{% endcomment %}
 
 {% schema %}
 {
