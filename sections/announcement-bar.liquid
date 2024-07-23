@@ -30,7 +30,6 @@
               <li>
                 <a href="/cart">
                   <img
-                    class="shopping-img"
                     width="40"
                     height="40"
                     loading="lazy"
@@ -38,11 +37,9 @@
                   >
                 </a>
               </li>
-              <li>
-                <form action="/search">
-                  <input class="search-nav" placeholder="search" type="search">
-                </form>
-              </li>
+              <form action="/search">
+                <input placeholder="search" type="search">
+              </form>
             {% endif %}
           {%- else -%}
           {%- endif -%}
