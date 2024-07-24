@@ -1,39 +1,65 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "banner": {
       "type": "banner",
-      "settings": {}
+      "settings": {
+        "background": "#F4F4F4",
+        "text_color": "#000000"
+      }
     },
     "three-images": {
       "type": "three-images",
-      "settings": {}
+      "settings": {
+      }
     },
     "gender-section": {
       "type": "gender-section",
-      "settings": {}
+      "settings": {
+      }
     },
-    "category-section": {
+    "category_section_yqFWaR": {
       "type": "category-section",
-      "settings": {}
+      "settings": {
+      }
     },
     "more-info": {
       "type": "more-info",
-      "settings": {}
+      "settings": {
+        "background": "#F4F4F4",
+        "text_color": "#000000",
+        "text": "default text",
+        "text2": "default text"
+      }
     },
     "all-collections": {
       "type": "all-collections",
-      "settings": {}
+      "settings": {
+        "background": "#F4F4F4",
+        "text_color": "#000000"
+      }
     },
     "all-products": {
       "type": "all-products",
-      "settings": {}
+      "settings": {
+        "background": "#F4F4F4",
+        "text_color": "#000000"
+      }
     }
   },
   "order": [
     "banner",
     "three-images",
     "gender-section",
-    "category-section",
+    "category_section_yqFWaR",
     "more-info",
     "all-collections",
     "all-products"
