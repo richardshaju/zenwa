@@ -8,7 +8,7 @@
       <div class="one">
         <div class="bottom-left-text">
           <p>FASHION</p>
-          <h3>High-Impact Skiwear</h3>
+          <h3 style="font-size: 33px;">High-Impact Skiwear</h3>
           <p>VIEW AND SHOP</p>
         </div>
       </div>
@@ -17,63 +17,67 @@
 </section>
 
 <style>
-    .three-images-wrapper {
-      display: flex;
-    }
+  .three-images-wrapper {
+    display: flex;
+  }
 
-    .one {
-      background-image: url("{{ 'bg.jpg' | asset_url }}");
-      width: 100%;
-      height: 700px; 
-      background-size: cover;
-      background-position: center;
-      position: relative; 
-    }
+  .one {
+    background-image: url("{{ 'bg.jpg' | asset_url }}");
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
 
   .bottom-left-text {
-    display: flex;
-    flex-direction: column;
     position: absolute;
-    bottom: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    color: white; /* Adjust color as needed */
-    margin: 0; /* Remove default margin */
+    bottom: 0;
+    left: 0;
+    padding: 40px;
+    color: white;
+    margin: 0;
+    background: linear-gradient(to top right,
+                rgba(0,0,0,0.8) 0%,
+                rgba(0,0,0,0.7) 30%,
+                rgba(0,0,0,0) 100%);
+    width: 100%;
   }
-    .one-user {
-      background-image: url("{{ section.settings.image | image_url }}");
-      width: 33.333%;
-      height: 500px;
-      background-size: cover;
-      background-position: center;
-    }
-    .two {
-      background-image: url("{{ 'two.png' | asset_url }}");
-      width: 33.333%;
-      height: 500px;
-      background-size: cover;
-      background-position: center;
-    }
-    .two-user {
-      background-image: url("{{ section.settings.image2 | image_url }}");
-      width: 33.333%;
-      height: 500px;
-      background-size: cover;
-      background-position: center;
-    }
-    .three {
-      background-image: url("{{ 'three.png' | asset_url }}");
-      width: 33.333%;
-      height: 500px;
-      background-size: cover;
-      background-position: center;
-    }
-    .three-user {
-      background-image: url("{{ section.settings.image3 | image_url }}");
-      width: 33.333%;
-      height: 500px;
-      background-size: cover;
-      background-position: center;
-    }
+  .one-user {
+    background-image: url("{{ section.settings.image | image_url }}");
+    width: 33.333%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  .two {
+    background-image: url("{{ 'two.png' | asset_url }}");
+    width: 33.333%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  .two-user {
+    background-image: url("{{ section.settings.image2 | image_url }}");
+    width: 33.333%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  .three {
+    background-image: url("{{ 'three.png' | asset_url }}");
+    width: 33.333%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  .three-user {
+    background-image: url("{{ section.settings.image3 | image_url }}");
+    width: 33.333%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
 </style>
 
 {% schema %}
