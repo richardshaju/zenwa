@@ -30,19 +30,29 @@
     position: relative;
   }
 
-  .bottom-left-text {
+  .one::before {
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 40px;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at bottom left,
+                rgba(0,0,0,0.8) 0%,
+                rgba(0,0,0,0.5) 30%,
+                rgba(0,0,0,0) 70%);
+    pointer-events: none;
+  }
+  
+  .bottom-left-text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
     color: white;
     margin: 0;
-    background: linear-gradient(to top right,
-                rgba(0,0,0,0.8) 0%,
-                rgba(0,0,0,0.7) 30%,
-                rgba(0,0,0,0) 100%);
-    width: 100%;
+    z-index: 1;
   }
+  
   .one-user {
     background-image: url("{{ section.settings.image | image_url }}");
     width: 33.333%;
