@@ -1,50 +1,53 @@
 <section class="banners-section">
-    <div class="banner-row" style="background-color:red;">
-      <div class="banner-left">
-        <p>FASHION</p>
-        <h3 style="font-size: 32px;">The New Evening Rules</h3>
-        <p>READ AND SHOP</p>
-      </div>
-      <div class="banner-right">
-        <img
-          width="25"
-          height="25"
-          loading="lazy"
-          src="{{ 'banner1-img.png' | asset_url }}"
-        >
-      </div>
+  <div class="banner-row" style="background-color:red;    height: 28rem;">
+    <div class="banner-left">
+      <p>FASHION</p>
+      <h3 style="font-size: 32px;">The New Evening Rules</h3>
+      <p>READ AND SHOP</p>
     </div>
-    <div class="banner-row" style="background-color:red;">
-      <div class="banner-left">
-        <p>FASHION</p>
-        <h3 style="font-size: 32px;">The New Evening Rules</h3>
-        <p>READ AND SHOP</p>
-      </div>
-      <div class="banner-right">
-        <img
-          width="25"
-          height="25"
-          loading="lazy"
-          src="{{ 'banner1-img.png' | asset_url }}"
-        >
-      </div>
+    <div class="banner-right">
+      <img
+        style="
+          width: 24.5rem;
+          height: 29.5rem;
+        "
+        width="25"
+        height="25"
+        loading="lazy"
+        src="{{ 'banner1-img.png' | asset_url }}"
+      >
     </div>
-    <div class="banner-row" style="background-color:red;">
-      <div class="banner-left">
-        <p>FASHION</p>
-        <h3 style="font-size: 32px;">The New Evening Rules</h3>
-        <p>READ AND SHOP</p>
-      </div>
-      <div class="banner-right">
-        <img
-          width="25"
-          height="25"
-          loading="lazy"
-          src="{{ 'banner1-img.png' | asset_url }}"
-        >
-      </div>
+  </div>
+  <div class="banner-row" style="background-color:red;    height: 28rem;">
+    <div class="banner-left">
+      <p>FASHION</p>
+      <h3 style="font-size: 32px;">The New Evening Rules</h3>
+      <p>READ AND SHOP</p>
     </div>
-
+    <div class="banner-right">
+      <img
+        width="25"
+        height="25"
+        loading="lazy"
+        src="{{ 'banner1-img.png' | asset_url }}"
+      >
+    </div>
+  </div>
+  <div class="banner-row" style="background-color:red;    height: 28rem;">
+    <div class="banner-left">
+      <p>FASHION</p>
+      <h3 style="font-size: 32px;">The New Evening Rules</h3>
+      <p>READ AND SHOP</p>
+    </div>
+    <div class="banner-right">
+      <img
+        width="25"
+        height="25"
+        loading="lazy"
+        src="{{ 'banner1-img.png' | asset_url }}"
+      >
+    </div>
+  </div>
 </section>
 <style>
   .two-images-wrapper {
@@ -53,12 +56,13 @@
     align-items: center;
   }
 
-  .banner-row{
+  .banner-row {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-end;
   }
-  .banner-left{
-    cursor:pointer;
+  .banner-left {
+    cursor: pointer;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -67,7 +71,7 @@
     color: white;
   }
   .gender-text {
-    cursor:pointer;
+    cursor: pointer;
     padding: 5px;
     border: none;
     font-size: 23px;
