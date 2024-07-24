@@ -30,8 +30,8 @@
               <li>
                 <a href="/cart">
                   <img
-                    width="20"
-                    height="20"
+                    width="25"
+                    height="25"
                     loading="lazy"
                     src="{{ 'd.png' | asset_url }}"
                   >
@@ -39,6 +39,12 @@
               </li>
               <form action="/search" class="form-wrapper">
                 <input class="search-nav" placeholder="search" type="search">
+                <img
+                  width="25"
+                  height="25"
+                  loading="lazy"
+                  src="{{ 'search.png' | asset_url }}"
+                >
               </form>
             {% endif %}
           {%- else -%}
@@ -49,33 +55,35 @@
   </section>
 
   <style>
-      .announcement-bar {
-        background: {{ section.settings.background }}
-        ;
-        color: {{ section.settings.text_color }}
-        ;
-      }
-      .announcement-bar-right-section{
-        display:flex;
-        align-items:center;
+          .announcement-bar {
+            background: {{ section.settings.background }}
+            ;
+            color: {{ section.settings.text_color }}
+            ;
+          }
+          .announcement-bar-right-section{
+            display:flex;
+            align-items:center;
 
-      }
-      .form-wrapper{
-        display:flex;
-        align-items:center;
-        margin:auto;
-      }
-      .search-nav{
-
-         border: none;
-        border-bottom: 1px solid #000; /* Adjust the color and thickness as needed */
-        outline: none;
-      }
-      .search-nav:focus{
-          border: none;
-          border-bottom: 1px solid #000; /* Keeps the border bottom on focus */
-          outline: none;
-      }
+          }
+          .form-wrapper{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin:auto;
+            padding: 0 10px;
+            border-bottom: 1px solid #000;
+          }
+          .search-nav{
+             border: none;
+    /* Adjust the color and thickness as needed */
+            outline: none;
+          }
+          .search-nav:focus{
+              border: none;
+              border-bottom: 1px solid #000; /* Keeps the border bottom on focus */
+              outline: none;
+          }
   </style>
 
   <script></script>
