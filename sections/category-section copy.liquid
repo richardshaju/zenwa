@@ -1,0 +1,69 @@
+<section class="two-images-wrapper">
+  <h4 style="padding:5px font-size: 25px;">SHOP BY CATEGORY</h4>
+  <div>
+    <div class="category-img-1">
+      <div class="section-text">
+        <p>FASHION</p>
+          <h3 style="font-size: 20px;">The New Evening Rules</h3>
+          <p>READ AND SHOP</p>
+      </div>
+    </div>
+    <div class="category-img-2">
+      <div class="section-text">
+        <p>DESIGNERS</p>
+        <h3 style="font-size: 38px;">Refined Accessories By Bottega Veneta</h3>
+        <p>SHOP</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .two-images-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+  }
+
+  .category-img-1 {
+    background-image: url("{{ 'category1.png' | asset_url }}");
+    width: 50%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding:5px 0px;
+  }
+  .category-img-2 {
+    background-image: url("{{ 'category2.png' | asset_url }}");
+    width: 50%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding:5px 0px;
+  }
+  .section-text {
+    cursor:pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 5px;
+    color: white;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Category Section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "category-section"
+    }
+  ]
+}
+{% endschema %}

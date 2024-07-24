@@ -12,6 +12,10 @@
       "type": "gender-section",
       "settings": {}
     },
+    "category-section": {
+      "type": "category-section",
+      "settings": {}
+    },
     "more-info": {
       "type": "more-info",
       "settings": {}
@@ -29,6 +33,7 @@
     "banner",
     "three-images",
     "gender-section",
+    "category-section",
     "more-info",
     "all-collections",
     "all-products"

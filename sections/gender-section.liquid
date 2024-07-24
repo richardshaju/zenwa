@@ -1,19 +1,20 @@
 <section class="two-images-wrapper">
-  <h4 style="padding:5px ">Just IN</h4>
-  <div class="men">
-    <div class="gender-text">
-        SHOP MEN'S
+  <h4 style="padding:5px font-size: 25px;">JUST IN</h4>
+  <div>
+    <div class="men">
+      <div class="gender-text">SHOP MEN'S</div>
+    </div>
+    <div class="women">
+      <div class="gender-text">SHOP WOMEN'S</div>
     </div>
   </div>
-  <div class="women">
-    <div class="gender-text">
-      SHOP WOMEN'S
-    </div></div>
 </section>
 <style>
   .two-images-wrapper {
     display: flex;
-    padding:10px 0px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
   }
 
   .men {
@@ -22,8 +23,9 @@
     height: 500px;
     background-size: cover;
     background-position: center;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .women {
     background-image: url("{{ 'women.png' | asset_url }}");
@@ -31,13 +33,17 @@
     height: 500px;
     background-size: cover;
     background-position: center;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
   }
-  .gender-text{
-    padding:5px;
-    border:none;
-    border-bottom: 1px solid #000;
+  .gender-text {
+    cursor:pointer;
+    padding: 5px;
+    border: none;
+    font-size: 23px;
+    color: white;
+    font-weight: 600;
+    border-bottom: 1px solid #ffffff;
   }
 </style>
 
