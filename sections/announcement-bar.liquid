@@ -30,8 +30,8 @@
               <li>
                 <a href="/cart">
                   <img
-                    width="40"
-                    height="40"
+                    width="20"
+                    height="20"
                     loading="lazy"
                     src="{{ 'd.png' | asset_url }}"
                   >
@@ -60,16 +60,21 @@
         align-items:center;
 
       }
+      .form-wrapper{
+        display:flex;
+        align-items:center;
+        margin:auto;
+      }
       .search-nav{
 
          border: none;
-    border-bottom: 1px solid #000; /* Adjust the color and thickness as needed */
-    outline: none;
+        border-bottom: 1px solid #000; /* Adjust the color and thickness as needed */
+        outline: none;
       }
       .search-nav:focus{
           border: none;
-    border-bottom: 1px solid #000; /* Keeps the border bottom on focus */
-    outline: none;
+          border-bottom: 1px solid #000; /* Keeps the border bottom on focus */
+          outline: none;
       }
   </style>
 
