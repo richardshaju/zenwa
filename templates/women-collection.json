@@ -1,0 +1,14 @@
+{
+    "sections": {
+        "women-collection": {
+            "type": "women-collection",
+            "settings": {}
+          }
+   
+      },
+      "order": [
+        "women-collection"
+     
+      ]
+
+}

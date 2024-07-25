@@ -1,0 +1,14 @@
+{
+    "sections": {
+        "men-collection": {
+            "type": "men-collection",
+            "settings": {}
+          }
+   
+      },
+      "order": [
+        "men-collection"
+     
+      ]
+
+}

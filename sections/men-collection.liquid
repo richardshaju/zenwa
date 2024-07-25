@@ -1,0 +1,73 @@
+<section class="">
+    <div class='card-wrapper'>
+        {% for collection in collections %}
+            <div class="collection-card">
+              <img
+                width="300"
+                height="300"
+                loading="lazy"
+                src="{{ collection.featured_image | image_url}}"
+              >
+              <h3>{{- collection.title | link_to: collection.url }}</h3>
+            </div>
+          {% endfor %}
+    </div>    
+</section>
+  <style>
+    .card-wrapper{
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        
+    }
+    .category-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0px;
+    }
+  
+    .category-img-1 {
+      background-image: url("{{ 'category1.png' | asset_url }}");
+      width: 50%;
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding:5px 0px;
+    }
+    .category-img-2 {
+      background-image: url("{{ 'category2.png' | asset_url }}");
+      width: 50%;
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding:5px 0px;
+    }
+    .section-text {
+      cursor:pointer;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      padding: 5px;
+      color: white;
+    }
+  </style>
+  
+  {% schema %}
+  {
+    "name": "Men Collection",
+    "settings": [],
+    "presets": [
+      {
+        "name": "men-collection"
+      }
+    ]
+  }
+  {% endschema %}
+  
