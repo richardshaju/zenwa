@@ -14,16 +14,8 @@
       "settings": {
       }
     },
-    "men_collection_nGfeQc": {
-      "type": "men-collection",
-      "settings": {
-        "background": "#F4F4F4",
-        "text_color": "#000000"
-      }
-    }
   },
   "order": [
     "main",
-    "men_collection_nGfeQc"
   ]
 }
