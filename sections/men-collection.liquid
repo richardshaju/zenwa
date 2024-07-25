@@ -58,11 +58,23 @@
       color: white;
     }
   </style>
-  
   {% schema %}
   {
-    "name": "Men Collection",
-    "settings": [],
+    "name": "men-collection",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "#F4F4F4"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text",
+        "default": "#000000"
+      }
+    ],
     "presets": [
       {
         "name": "men-collection"
@@ -70,4 +82,3 @@
     ]
   }
   {% endschema %}
-  
