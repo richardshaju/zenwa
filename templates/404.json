@@ -1,12 +1,29 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
-    "sections": {
-      "main": {
-        "type": "main-404",
-        "settings": {
-        }
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
       }
     },
-    "order": [
-      "main"
-    ]
+    "men_collection_nGfeQc": {
+      "type": "men-collection",
+      "settings": {
+        "background": "#F4F4F4",
+        "text_color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "men_collection_nGfeQc"
+  ]
 }
