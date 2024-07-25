@@ -1,14 +1,14 @@
 <section class="">
     <div class='card-wrapper'>
-        {% for collection in collections %}
+        {% for product in collections["Men's Collection"].product %}
             <div class="collection-card">
               <img
                 width="300"
                 height="300"
                 loading="lazy"
-                src="{{ collection.featured_image | image_url}}"
+                src="{{ product.featured_image | image_url}}"
               >
-              <h3>{{- collection.title | link_to: collection.url }}</h3>
+              <h3>{{- product.title | link_to: product.url }}</h3>
             </div>
           {% endfor %}
     </div>    
