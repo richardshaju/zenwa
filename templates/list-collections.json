@@ -1,13 +1,14 @@
+
 {
     "sections": {
-        "collection": {
-            "type": "collection",
+        "list-collection": {
+            "type": "list-collection",
             "settings": {}
           }
    
       },
       "order": [
-        "collection"
-     
+        "list-collection"
       ]
+
 }
