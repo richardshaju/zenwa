@@ -1,9 +1,8 @@
-{% paginate collection.products by 4 %}
+{% paginate collection.products by 8 %}
   <section class="collection-sec">
     <div>
       <select id="sort-by">
         {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
-
         {% for option in collection.sort_options %}
           <option
             value="{{ option.value }}"
@@ -17,18 +16,19 @@
       </select>
     </div>
     <div>
-      <h1>kjhjj</h1>
-      <p>{{ collection.title }}</p>
       <div class="products-grid">
         {% for product in collection.products %}
-          <div class="product-card">
+          <div class="product-card" {{ link_to: product.url }}>
             <img
               width="300"
               height="300"
               loading="lazy"
               src="{{ product.featured_image | image_url}}"
             >
-            <h3>{{- product.title | link_to: product.url }}</h3>
+            <div class="product-data">
+              <p>{{- product.title }}</p>
+              <p>{{- product.price | money }}</p>
+            </div>
           </div>
         {% endfor %}
       </div>
@@ -46,16 +46,17 @@
     ;
     padding: 10px;
     display: flex;
-    justify-content: space-between
+    flex-direction:column;
   }
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-template-columns: repeat(4, 1fr);    /* Three columns */
     gap: 20px; /* Adjust the gap between grid items */
   }
 
   .product-card {
-    border: 1px solid #ddd; /* Add a border for each product card */
+    display:flex;
+    flex-direction:column;
     padding: 10px;
     text-align: center;
   }
@@ -63,6 +64,10 @@
   .product-card img {
     max-width: 100%;
     height: auto;
+  }
+  .product-data{
+    display:flex;
+    justify-content:space-between;
   }
 </style>
 
