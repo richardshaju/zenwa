@@ -18,7 +18,8 @@
     <div>
       <div class="products-grid">
         {% for product in collection.products %}
-          <div class="product-card" {{ link_to: product.url }}>
+          <div class="product-card">
+            <a href="{{ product.url }}">
             <img
               width="300"
               height="300"
@@ -29,6 +30,7 @@
               <p>{{- product.title }}</p>
               <p>{{- product.price | money }}</p>
             </div>
+          </a>
           </div>
         {% endfor %}
       </div>
