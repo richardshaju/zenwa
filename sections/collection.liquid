@@ -1,21 +1,23 @@
 {% paginate collection.products by 8 %}
   <section class="collection-sec">
-    <span>Home &gt; {{ collection.title }}</span>
-    <div class="filter-wrap">
-      <p>Sort By:</p>
-      <select id="sort-by">
-        {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
-        {% for option in collection.sort_options %}
-          <option
-            value="{{ option.value }}"
-            {% if option.value == sort_by %}
-              selected="selected"
-            {% endif %}
-          >
-            {{ option.name }}
-          </option>
-        {% endfor %}
-      </select>
+    <div class="top-bar">
+      <span>Home &raquo; {{ collection.title }}</span>
+      <div class="filter-wrap">
+        <p>Sort By:</p>
+        <select id="sort-by">
+          {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+          {% for option in collection.sort_options %}
+            <option
+              value="{{ option.value }}"
+              {% if option.value == sort_by %}
+                selected="selected"
+              {% endif %}
+            >
+              {{ option.name }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
     </div>
     <div
       style="
@@ -50,17 +52,23 @@
         {% else %}
           <li class="prev disabled"><span>&laquo;</span></li>
         {% endif %}
-    
+
         {% for part in paginate.parts %}
           {% if part.is_link %}
-            <li><a href="{{ part.url }}">{{ part.title }}</a></li>
+            <li>
+              <a href="{{ part.url }}">{{ part.title }}</a>
+            </li>
           {% elsif part.title == paginate.current_page %}
-            <li class="active"><span>{{ part.title }}</span></li>
+            <li class="active">
+              <span>{{ part.title }}</span>
+            </li>
           {% else %}
-            <li class="disabled"><span>{{ part.title }}</span></li>
+            <li class="disabled">
+              <span>{{ part.title }}</span>
+            </li>
           {% endif %}
         {% endfor %}
-    
+
         {% if paginate.next %}
           <li class="next"><a href="{{ paginate.next.url }}">&raquo;</a></li>
         {% else %}
@@ -81,11 +89,16 @@
     display: flex;
     flex-direction:column;
   }
-  .filter-wrap{
+  .top-bar{
     display: flex;
+    color:000000a8;
+    flex-direction: column;
     padding: 24px 57px;
-    align-items: center;
+  }
+  .filter-wrap {
+    display: flex;
     gap: 12px;
+    align-items: center;
   }
   #sort-by {
     padding:10px;
@@ -122,19 +135,19 @@
     text-align: center;
     margin: 20px 0;
   }
-  
+
   .pagination ul {
     display: flex;
     padding: 0;
     margin: 0;
     justify-content: center;
   }
-  
+
   .pagination li {
     display: inline;
     margin: 0 5px;
   }
-  
+
   .pagination li a,
   .pagination li span {
     color: #333;
@@ -145,17 +158,17 @@
     border: 1px solid #ddd;
     border-radius: 20px;
   }
-  
+
   .pagination li a:hover:not(.active) {
     background-color: #ddd;
   }
-  
+
   .pagination li.active span {
     background-color: #000000;
     color: white;
     border: 1px solid #000000;
   }
-  
+
   .pagination li.disabled span {
     color: #ddd;
     cursor: not-allowed;

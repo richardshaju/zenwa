@@ -1,13 +1,13 @@
 <section>
   {% if search.performed %}
     <h1>search page</h1>
-    <div>
-      {% for result in search.results %}
-        <p>{{ result.object_type }}</p>
-      {% endfor %}
+
+    {% for result in search.results %}
+      <p>{{ result.object_type == 'product'}}</p>
+      <a href="{{result.url}}">{{ result.title }}</a>
+    {% endfor %}
   {% else %}
     <h1>not results found!</h1>
-    </div>
   {% endif %}
 </section>
 
