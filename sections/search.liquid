@@ -25,19 +25,20 @@
       </div>
     {% endif %}
   </section>
-  <style>
-    .serach-sec {
-      padding: 30px;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* Three columns */
-      justify-items: center;
-      width: 86%;
-      padding: 30px 0px;
-    }
-  </style>
-  {% schema %}
+{% endpaginate %}
+<style>
+  .serach-sec {
+    padding: 30px;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Three columns */
+    justify-items: center;
+    width: 86%;
+    padding: 30px 0px;
+  }
+</style>
+{% schema %}
 {
   "name": "search",
   "settings": [
@@ -60,5 +61,4 @@
     }
   ]
 }
-  {% endschema %}
-{% endpaginate %}
+{% endschema %}
