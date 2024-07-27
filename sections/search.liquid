@@ -1,32 +1,30 @@
-<section>
+<section class="serach-sec">
   {% if search.performed %}
     <div>
       Here's your results for <strong> {{ search.terms }}</strong>
     </div>
-
-    {% for result in search.results %}
-      {% if result.object_type == 'product' %}
-        <div class="product-card">
-          <a href="{{ result.url }}">
-            <img
-              width="300"
-              height="330"
-              loading="lazy"
-              src="{{ result.featured_image | image_url}}"
-            >
-            <div class="product-data">
-              <p>{{- result.title }}</p>
-              <p>{{- result.price | money }}</p>
-            </div>
-          </a>
-        </div>
+    <div class="product-grid">
+      {% for result in search.results %}
+        {% if result.object_type == 'product' %}
+          {% render 'product-card', product: product %}
         {% endif %}
-    {% endfor %}
+      {% endfor %}
+    </div>
   {% else %}
     <h1>not results found!</h1>
   {% endif %}
 </section>
-
+<style>
+  .serach-sec{
+    padding:30px;
+  }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Three columns */
+    justify-items: center;
+    width: 86%;
+  }
+</style>
 {% schema %}
 {
   "name": "search",

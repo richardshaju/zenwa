@@ -27,20 +27,7 @@
     >
       <div class="products-grid">
         {% for product in collection.products %}
-          <div class="product-card">
-            <a href="{{ product.url }}">
-              <img
-                width="300"
-                height="330"
-                loading="lazy"
-                src="{{ product.featured_image | image_url}}"
-              >
-              <div class="product-data">
-                <p>{{- product.title }}</p>
-                <p>{{- product.price | money }}</p>
-              </div>
-            </a>
-          </div>
+          {% render 'product-card', product:product %}
         {% endfor %}
       </div>
     </div>
@@ -115,27 +102,7 @@
     width:86%;
   }
 
-  .product-card {
-    display:flex;
-    width:19rem;
-    flex-direction:column;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .product-card img {
-    max-width: 100%;
-    height: auto;
-  }
-  .product-data{
-    display:flex;
-    padding-top:7px;
-    justify-content:space-between;
-  }
-  .product-card a{
-    text-decoration:none;
-    color:black;
-  }
+  
   .pagination {
     text-align: center;
     margin: 20px 0;
