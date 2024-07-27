@@ -1,10 +1,26 @@
 <section>
   {% if search.performed %}
-    <h1>search page</h1>
+    <div>
+      Here's your results for <strong> {{ search.terms }}</strong>
+    </div>
 
     {% for result in search.results %}
-      <p>{{ result.object_type == 'product'}}</p>
-      <a href="{{result.url}}">{{ result.title }}</a>
+      {% if result.object_type == 'product' %}
+        <div class="product-card">
+          <a href="{{ result.url }}">
+            <img
+              width="300"
+              height="330"
+              loading="lazy"
+              src="{{ result.featured_image | image_url}}"
+            >
+            <div class="product-data">
+              <p>{{- result.title }}</p>
+              <p>{{- result.price | money }}</p>
+            </div>
+          </a>
+        </div>
+        {% endif %}
     {% endfor %}
   {% else %}
     <h1>not results found!</h1>
