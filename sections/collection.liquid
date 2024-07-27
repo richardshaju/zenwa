@@ -1,7 +1,7 @@
 {% paginate collection.products by 8 %}
   <section class="collection-sec">
     <div class="top-bar">
-      <span>Home &raquo; {{ collection.title }}</span>
+      <span><a href="/">Home </a>&raquo; {{ collection.title }}</span>
       <div class="filter-wrap">
         <p>Sort By:</p>
         <select id="sort-by">
@@ -89,11 +89,16 @@
     display: flex;
     flex-direction:column;
   }
+  .collection-sec a{
+    text-decoration:none;
+    color:#000000a8;
+  }
   .top-bar{
     display: flex;
-    color:000000a8;
+    color:#000000a8;
     flex-direction: column;
     padding: 24px 57px;
+    gap:30px
   }
   .filter-wrap {
     display: flex;
