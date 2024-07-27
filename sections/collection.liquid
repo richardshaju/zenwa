@@ -31,38 +31,7 @@
         {% endfor %}
       </div>
     </div>
-
-    <div class="pagination">
-      <ul>
-        {% if paginate.previous %}
-          <li class="prev"><a href="{{ paginate.previous.url }}">&laquo;</a></li>
-        {% else %}
-          <li class="prev disabled"><span>&laquo;</span></li>
-        {% endif %}
-
-        {% for part in paginate.parts %}
-          {% if part.is_link %}
-            <li>
-              <a href="{{ part.url }}">{{ part.title }}</a>
-            </li>
-          {% elsif part.title == paginate.current_page %}
-            <li class="active">
-              <span>{{ part.title }}</span>
-            </li>
-          {% else %}
-            <li class="disabled">
-              <span>{{ part.title }}</span>
-            </li>
-          {% endif %}
-        {% endfor %}
-
-        {% if paginate.next %}
-          <li class="next"><a href="{{ paginate.next.url }}">&raquo;</a></li>
-        {% else %}
-          <li class="next disabled"><span>&raquo;</span></li>
-        {% endif %}
-      </ul>
-    </div>
+      {%  render 'pagination' , paginate:paginate %}
   </section>
 {% endpaginate %}
 
@@ -103,48 +72,7 @@
   }
 
   
-  .pagination {
-    text-align: center;
-    margin: 20px 0;
-  }
-
-  .pagination ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
-  }
-
-  .pagination li {
-    display: inline;
-    margin: 0 5px;
-  }
-
-  .pagination li a,
-  .pagination li span {
-    color: #333;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-  }
-
-  .pagination li a:hover:not(.active) {
-    background-color: #ddd;
-  }
-
-  .pagination li.active span {
-    background-color: #000000;
-    color: white;
-    border: 1px solid #000000;
-  }
-
-  .pagination li.disabled span {
-    color: #ddd;
-    cursor: not-allowed;
-  }
+  
 </style>
 
 <script>
