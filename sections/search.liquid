@@ -1,6 +1,6 @@
 {% paginate search.results by 8 %}
   <section class="serach-sec">
-    {% if search.performed %}
+    {% if search.results_count > 0 %}
       <div style="    font-size: 23px;">
         Here's your results for <strong> {{ search.terms }}</strong>
       </div>
