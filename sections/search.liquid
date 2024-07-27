@@ -1,6 +1,6 @@
 {% paginate search.results by 8 %}
   <section class="serach-sec">
-    {% if search.performed %}
+    {% if search.results %}
       <div style="    font-size: 23px;">
         Here's your results for <strong> {{ search.terms }}</strong>
       </div>
@@ -22,7 +22,15 @@
         {% render 'pagination', paginate: paginate %}
       </div>
     {% else %}
-      <div class="width:100%;height:100%; display:flex;justify-items: center;align-itmes:center;">
+      <div
+        style="
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
         <h2>Result not found.</h2>
       </div>
     {% endif %}
