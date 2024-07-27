@@ -46,9 +46,9 @@
     <div class="pagination">
       <ul>
         {% if paginate.previous %}
-          <li class="prev"><a href="{{ paginate.previous.url }}">&laquo; Previous</a></li>
+          <li class="prev"><a href="{{ paginate.previous.url }}">&laquo;</a></li>
         {% else %}
-          <li class="prev disabled"><span>&laquo; Previous</span></li>
+          <li class="prev disabled"><span>&laquo;</span></li>
         {% endif %}
     
         {% for part in paginate.parts %}
@@ -62,9 +62,9 @@
         {% endfor %}
     
         {% if paginate.next %}
-          <li class="next"><a href="{{ paginate.next.url }}">Next &raquo;</a></li>
+          <li class="next"><a href="{{ paginate.next.url }}">&raquo;</a></li>
         {% else %}
-          <li class="next disabled"><span>Next &raquo;</span></li>
+          <li class="next disabled"><span>&raquo;</span></li>
         {% endif %}
       </ul>
     </div>
@@ -124,9 +124,10 @@
   }
   
   .pagination ul {
-    display: inline-block;
+    display: flex;
     padding: 0;
     margin: 0;
+    justify-content: center;
   }
   
   .pagination li {
@@ -142,7 +143,7 @@
     text-decoration: none;
     transition: background-color .3s;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 20px;
   }
   
   .pagination li a:hover:not(.active) {
@@ -150,9 +151,9 @@
   }
   
   .pagination li.active span {
-    background-color: #4CAF50;
+    background-color: #000000;
     color: white;
-    border: 1px solid #4CAF50;
+    border: 1px solid #000000;
   }
   
   .pagination li.disabled span {
