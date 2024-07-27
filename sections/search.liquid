@@ -6,7 +6,7 @@
     <div class="product-grid">
       {% for result in search.results %}
         {% if result.object_type == 'product' %}
-          {% render 'product-card', product: product %}
+          {% render 'product-card', product: result %}
         {% endif %}
       {% endfor %}
     </div>
